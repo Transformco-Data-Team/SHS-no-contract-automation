@@ -24,5 +24,10 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Python script
+      env:
+        SNOWFLAKE_USER: ${{ secrets.SNOWFLAKE_USER }}
+        SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
+        SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+        SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
       run: |
         python scripts/cancel-report.py

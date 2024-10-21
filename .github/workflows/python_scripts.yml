@@ -29,5 +29,9 @@ jobs:
         SNOWFLAKE_PASSWORD: ${{ secrets.SNOWFLAKE_PASSWORD }}
         SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
         SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        SMTP_SENDER_EMAIL: ${{ secrets.SMTP_SENDER_EMAIL }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       run: |
         python scripts/cancel-report.py

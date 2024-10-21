@@ -1143,7 +1143,7 @@ def run_query():
 
 # Step 2: Send the CSV via Email
 def send_email(csv_file):
-    receiver_emails = ['joseph.liechty@transformco.com', 'sheila.andrews@transformco.com', 'sunday.abolaji@transformco.com', 'pedro.rodriguez@transformco.com']
+    receiver_emails = ['bolajidamilaresunday@gmail.com']
     
     # Email details
     sender_email = os.getenv("SMTP_SENDER_EMAIL")

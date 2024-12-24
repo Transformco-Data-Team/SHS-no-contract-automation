@@ -1,9 +1,9 @@
-name: Run Python Script Daily
+name: Send Assurant PA Report
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # Runs at 00:00 UTC every day
-  workflow_dispatch:  # Allows manual triggering of the workflow
+    - cron: '0 14 * * *'  # Runs at 14:00 UTC every day
+  workflow_dispatch:  # Allows  manual triggering of the workflow
 
 jobs:
   run-script:
@@ -34,4 +34,4 @@ jobs:
         SMTP_SENDER_EMAIL: ${{ secrets.SMTP_SENDER_EMAIL }}
         SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       run: |
-        python scripts/cancel-report.py
+        python scripts/report.py

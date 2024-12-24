@@ -1143,11 +1143,11 @@ def run_query():
 
 # Step 2: Send the CSV via Email
 def send_email(csv_file):
-    receiver_emails = ['sunday.abolaji@transformco.com', 'joseph.liechty@transformco.com', 'pedro.rodriguez@transformco.com', 'sheila.andrews@transformco.com']
+    receiver_emails = ['sunday.abolaji@transformco.com']
     
     # Email details
     sender_email = os.getenv("SMTP_SENDER_EMAIL")
-    subject = 'Daily Cancels Report - Shows Previous day data'
+    subject = 'auto test'
     body = 'Please find attached the daily cancel report.'
     smtp_server = os.getenv("SMTP_SERVER")
     smtp_port = int(os.getenv("SMTP_PORT"))

@@ -232,11 +232,11 @@ def send_email(csv_file):
     # Format the date as YYYY-MM-DD
     formatted_date = previous_date.strftime('%Y-%m-%d')
 
-    receiver_emails = ['sunday.abolaji@transformco.com']
+    receiver_emails = ['sunday.abolaji@transformco.com', 'joseph.liechty@transformco.com', 'katrina.means@transformco.com']
     
     # Email details
     sender_email = os.getenv("SMTP_SENDER_EMAIL")
-    subject = 'auto test'
+    subject = 'FROM DAMI: ASSURANT-PA-Service Order with no Contracts'
     body = f'''ASSURANT-PA: Service Order with no Contracts for {formatted_date}
     Please find attached the list of Service Orders with no Contracts for {formatted_date}. 
     This report is generated daily and sent to the relevant stakeholders. It contains  the list of Service order created in the previous day with no contracts.

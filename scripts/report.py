@@ -226,13 +226,19 @@ def run_query():
 
 # Step 2: Send the CSV via Email
 def send_email(csv_file):
+    # Get the previous date
+    previous_date = datetime.now() - timedelta(days=1)
+    
+    # Format the date as YYYY-MM-DD
+    formatted_date = previous_date.strftime('%Y-%m-%d')
+
     receiver_emails = ['sunday.abolaji@transformco.com']
     
     # Email details
     sender_email = os.getenv("SMTP_SENDER_EMAIL")
     subject = 'auto test'
-    body = f'''ASSURANT-PA: Service Order with no Contracts for {datetime.now() - timedelta(days=1).now().strftime("%Y-%m-%d")}
-    Please find attached the list of Service Orders with no Contracts for {datetime.now() - timedelta(days=1).now().strftime("%Y-%m-%d")}. 
+    body = f'''ASSURANT-PA: Service Order with no Contracts for {formatted_date}
+    Please find attached the list of Service Orders with no Contracts for {formatted_date}. 
     This report is generated daily and sent to the relevant stakeholders. It contains  the list of Service order created in the previous day with no contracts.
 
     Please reach out to sunday.damilare@transformco.com to include recipients or for any questions or concerns.

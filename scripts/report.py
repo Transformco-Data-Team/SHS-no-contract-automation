@@ -231,9 +231,9 @@ def send_email(csv_file):
     # Email details
     sender_email = os.getenv("SMTP_SENDER_EMAIL")
     subject = 'auto test'
-    body = f'''ASSURANT-PA: Service Order with no Contracts for {datetime.now().strftime("%Y-%m-%d")}
-    Please find attached the list of Service Orders with no Contracts for {datetime.now().strftime("%Y-%m-%d")}. 
-    This report is generated daily and sent to the relevant stakeholders. 
+    body = f'''ASSURANT-PA: Service Order with no Contracts for {datetime.now() - timedelta(days=1).now().strftime("%Y-%m-%d")}
+    Please find attached the list of Service Orders with no Contracts for {datetime.now() - timedelta(days=1).now().strftime("%Y-%m-%d")}. 
+    This report is generated daily and sent to the relevant stakeholders. It contains  the list of Service order created in the previous day with no contracts.
 
     Please reach out to sunday.damilare@transformco.com to include recipients or for any questions or concerns.
     '''

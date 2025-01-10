@@ -237,7 +237,7 @@ def send_email(csv_file):
     # Format the date as YYYY-MM-DD
     formatted_date = previous_date.strftime('%Y-%m-%d')
 
-    receiver_emails = ['sunday.abolaji@transformco.com', 'joseph.liechty@transformco.com', 'katrina.means@transformco.com', 'victor.smith@transformco.com', 'erwin.estrada@transformco.com']
+    receiver_emails = ['sunday.abolaji@transformco.com', 'joseph.liechty@transformco.com', 'katrina.means@transformco.com', 'victor.smith@transformco.com', 'erwin.estrada@transformco.com', 'kelly.nance@transformco.com']
     
     # Email details
     sender_email = os.getenv("SMTP_SENDER_EMAIL")

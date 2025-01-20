@@ -241,7 +241,7 @@ def send_email(csv_file):
     
     # Email details
     sender_email = os.getenv("SMTP_SENDER_EMAIL")
-    subject = 'FROM DAMI: ASSURANT-PA-Service Order with no Contracts'
+    subject = '[AUTOMATED] ASSURANT-PA-Service Order with no Contracts'
     body = f'''ASSURANT-PA: Service Order with no Contracts for {formatted_date}
     Please find attached the list of Service Orders with no Contracts for {formatted_date}. 
     This report is generated daily and sent to the relevant stakeholders. It contains  the list of Service order created in the previous day with no contracts.
